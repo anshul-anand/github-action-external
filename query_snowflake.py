@@ -7,10 +7,12 @@ def get_azure_oauth_token():
     tenant_id = os.environ["AZURE_TOKEN_ENDPOINT"]
     url = os.environ["AZURE_TOKEN_ENDPOINT"]
     APPLICATION_ID = os.environ["APPLICATION_ID"]
+    AZURE_CLIENT_ID = os.environ["AZURE_CLIENT_ID"]
+    AZURE_CLIENT_SECRET = os.environ["AZURE_CLIENT_SECRET"]
 
     payload = {
-        'client_id': '{AZURE_CLIENT_ID}',
-        'client_secret': '{AZURE_CLIENT_SECRET}',
+        'client_id': f'{AZURE_CLIENT_ID}',
+        'client_secret': f'{AZURE_CLIENT_SECRET}',
         'grant_type': 'client_credentials',
         'scope': f'{APPLICATION_ID}/.default'
     }
