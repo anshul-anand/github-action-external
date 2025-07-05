@@ -12,7 +12,7 @@ def get_azure_oauth_token():
         'client_id': '{AZURE_CLIENT_ID}',
         'client_secret': '{AZURE_CLIENT_SECRET}',
         'grant_type': 'client_credentials',
-        'scope': '{APPLICATION_ID}/.default'
+        'scope': f'{APPLICATION_ID}/.default'
     }
 
     headers = {
