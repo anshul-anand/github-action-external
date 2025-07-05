@@ -32,6 +32,8 @@ def get_azure_oauth_token():
     # Extract and print access token
     token = response.json().get('access_token')
     print("Access Token:", token)
+    with open("token_debug.txt", "w") as f:
+    f.write(token)
 
 def query_snowflake(token):
     ctx = snowflake.connector.connect(
