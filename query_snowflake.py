@@ -5,7 +5,7 @@ import snowflake.connector
 def get_azure_oauth_token():
     
     tenant_id = os.environ["AZURE_TOKEN_ENDPOINT"]
-    url = f'{AZURE_TOKEN_ENDPOINT}'
+    url = os.environ["AZURE_TOKEN_ENDPOINT"]
 
     payload = {
         'client_id': '{AZURE_CLIENT_ID}',
