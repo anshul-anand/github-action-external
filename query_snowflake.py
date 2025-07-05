@@ -41,7 +41,7 @@ def query_snowflake(token):
         account=os.environ["SNOWFLAKE_ACCOUNT"],
         authenticator="oauth",
         token=token,
-        role=os.environ.get("SNOWFLAKE_ROLE"),
+        #role=os.environ.get("SNOWFLAKE_ROLE"),
         warehouse=os.environ.get("SNOWFLAKE_WAREHOUSE"),
         database=os.environ.get("SNOWFLAKE_DATABASE"),
         schema=os.environ.get("SNOWFLAKE_SCHEMA")
