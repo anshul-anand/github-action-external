@@ -6,6 +6,7 @@ def get_azure_oauth_token():
     
     tenant_id = os.environ["AZURE_TOKEN_ENDPOINT"]
     url = os.environ["AZURE_TOKEN_ENDPOINT"]
+    APPLICATION_ID = os.environ["APPLICATION_ID"]
 
     payload = {
         'client_id': '{AZURE_CLIENT_ID}',
