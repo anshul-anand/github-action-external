@@ -21,6 +21,7 @@ jobs:
 
       - name: Run query with OAuth token
         env:
+          AZURE_TOKEN_ENDPOINT: ${{ secrets.AZURE_TOKEN_ENDPOINT }}
           AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
           AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
           AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
