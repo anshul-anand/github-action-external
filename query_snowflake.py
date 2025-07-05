@@ -20,7 +20,9 @@ def get_azure_oauth_token():
 
     response = requests.post(url, data=payload, headers=headers)
     response.raise_for_status()
-
+    if response.status_code != 200:
+         print("Error response:", response.text)
+    
     # Extract and print access token
     token = response.json().get('access_token')
     # print("Access Token:", token)
