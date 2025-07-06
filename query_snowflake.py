@@ -1,6 +1,7 @@
 import os
 import requests
 import snowflake.connector
+import urllib.parse
 
 def get_azure_oauth_token():
     
