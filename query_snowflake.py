@@ -22,6 +22,9 @@ def get_azure_oauth_token():
     }
 
     response = requests.post(url, data=payload, headers=headers)
+    print("POST", url)
+    print("Headers:", headers)
+    print("Payload:", urllib.parse.urlencode(payload)) 
     if response.status_code == 200:
         print("🚨 Azure OAuth Error:", response.status_code)
         print("🔧 Response body:", response.text)
