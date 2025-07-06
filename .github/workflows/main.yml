@@ -13,18 +13,11 @@ jobs:
 
       - name: Set up Python
         uses: actions/setup-python@v4
-        with:
-          
+        with:          
           python-version: '3.10'
 
       - name: Install dependencies
         run: pip install snowflake-connector-python requests
-
-      - name: Upload token file (debug only)
-        uses: actions/upload-artifact@v4
-        with:
-            name: token-debug
-            path: token_debug.txt
 
       - name: Run query with OAuth token
         env:
