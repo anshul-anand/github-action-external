@@ -38,6 +38,7 @@ def get_azure_oauth_token():
 def query_snowflake(token):
     ctx = snowflake.connector.connect(
         user=os.environ["SNOWFLAKE_USER"],
+        host='YHAUUZK-KJ24593',
         account=os.environ["SNOWFLAKE_ACCOUNT"],
         authenticator="oauth",
         token=token,
